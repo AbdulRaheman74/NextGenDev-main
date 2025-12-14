@@ -36,13 +36,13 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-primary font-mono text-sm tracking-wider uppercase mb-6"
+            className="text-primary font-mono text-xs sm:text-sm tracking-wider uppercase mb-6 max-w-xs mx-auto md:max-w-none"
           >
             AI + Design + Development: Creating The Future, Today.
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-text mb-8 leading-tight tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-text mb-8 leading-tight tracking-tight px-2"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}

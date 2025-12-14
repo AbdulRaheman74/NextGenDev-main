@@ -30,20 +30,20 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-bg relative pt-24 overflow-hidden border-t border-white/5">
+    <footer className="bg-bg relative pt-12 md:pt-24 overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
 
         {/* Top Section: Links & Info */}
-        <div className="grid md:grid-cols-4 gap-12 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-16 md:mb-24">
 
           {/* Brand Info */}
-          <div className="md:col-span-2 space-y-6">
+          <div className="md:col-span-2 space-y-6 text-center md:text-left">
             <h3 className="text-2xl font-bold text-white tracking-tight">NextGenDev.</h3>
-            <p className="text-text/60 max-w-sm leading-relaxed">
+            <p className="text-text/60 max-w-sm mx-auto md:mx-0 leading-relaxed">
               Crafting digital experiences that merge art with engineering.
               Based in Maharashtra, India, working globally.
             </p>
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-4 pt-4 justify-center md:justify-start">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -58,25 +58,27 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Link Columns */}
-          {footerLinks.map((column) => (
-            <div key={column.title}>
-              <h4 className="text-sm font-mono text-text/40 uppercase tracking-widest mb-6">{column.title}</h4>
-              <ul className="space-y-4">
-                {column.links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-text/80 hover:text-primary transition-colors flex items-center gap-2 group"
-                    >
-                      {link.name}
-                      <ArrowUpRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Link Columns - Mobile Friendly Grid */}
+          <div className="grid grid-cols-2 gap-8 md:col-span-2 md:grid-cols-2">
+            {footerLinks.map((column) => (
+              <div key={column.title}>
+                <h4 className="text-sm font-mono text-text/40 uppercase tracking-widest mb-6">{column.title}</h4>
+                <ul className="space-y-4">
+                  {column.links.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="text-text/80 hover:text-primary transition-colors flex items-center gap-2 group"
+                      >
+                        {link.name}
+                        <ArrowUpRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
         </div>
 

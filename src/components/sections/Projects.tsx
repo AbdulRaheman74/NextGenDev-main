@@ -199,7 +199,8 @@ export const Projects: React.FC = () => {
       <div className="container mx-auto px-4 max-w-6xl">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono tracking-widest uppercase mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -209,7 +210,7 @@ export const Projects: React.FC = () => {
               Selected <span className="text-primary">Works</span>
             </h2>
           </div>
-          <p className="text-text/60 max-w-md text-right md:text-left">
+          <p className="text-text/60 max-w-md text-left md:text-right mt-4 md:mt-0">
             Explore our latest projects showcasing technical expertise and creative design.
           </p>
         </div>
